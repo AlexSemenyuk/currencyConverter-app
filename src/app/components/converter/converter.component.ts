@@ -18,10 +18,6 @@ import { ICurrency } from 'src/app/models/currency';
 export class ConverterComponent implements OnChanges {
   @Input() currencies: ICurrency[];
 
-  // firstInputValue: string = '';
-  // secondInputValue: string = '';
-  // firstSelectValue: string = '';
-  // secondSelectValue: string = '';
   firstInputValue: number = 0;
   secondInputValue: number = 0;
   firstSelectValue: number = 0;
@@ -57,11 +53,6 @@ export class ConverterComponent implements OnChanges {
   }
 
   onSelectChanged(event: { name: string; value: number }): void {
-    // if (event.value !== 0) {
-    //   console.log('Select');
-    //   console.log('name: ', event.name);
-    //   console.log('value: ', event.value);
-    // }
     if (event.name === 'firstSelect') {
       this.firstSelectValue = event.value;
       if (
