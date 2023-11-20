@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { ICurrency } from './models/currency';
-import { AppiCurrenciesService } from './services/api-currencies.service';
+import { ApiCurrenciesService } from './services/api-currencies.service';
 // import { currencies as data } from './data/currencies';
 import { selectedData } from './data/selectedData';
 
@@ -14,7 +14,7 @@ export class AppComponent implements OnInit {
   selectedData: any[] = selectedData;
   currencies: ICurrency[] = [];
 
-  constructor(private apiCurrencyServices: AppiCurrenciesService) {}
+  constructor(private apiCurrencyServices: ApiCurrenciesService) {}
 
   ngOnInit(): void {
     this.apiCurrencyServices.getAll().subscribe(currencies => {

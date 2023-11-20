@@ -6,7 +6,7 @@ import { ICurrency } from '../models/currency';
 @Injectable({
   providedIn: 'root'
 })
-export class AppiCurrenciesService {
+export class ApiCurrenciesService {
   private apiURL =
     'https://bank.gov.ua/NBUStatService/v1/statdirectory/exchange?json';
 
