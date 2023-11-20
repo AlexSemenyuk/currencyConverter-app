@@ -1,0 +1,14 @@
+<header
+  class="absolute top-0 right-0 left-0 h-[120px] text-white text-center font-bold bg-teal-700"
+>
+  <h1 class="text-center">{{ title | uppercase }}</h1>
+  <div *ngIf="currencies[0]">
+    <p class="pl-2 text-start font-normal">
+      на дату {{ currencies[0].exchangedate }}
+    </p>
+  </div>
+  <app-current-currency
+    *ngFor="let selectedCurrency of selectedCurrencies"
+    [currency]="{selectedCurrency}"
+  ></app-current-currency>
+</header>

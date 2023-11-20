@@ -1,0 +1,26 @@
+<div style="margin-top: 150px">
+  <div class="">
+    <app-form
+      [currencies]="currencies"
+      [inputName]="'firstInput'"
+      [selectName]="'firstSelect'"
+      (inputChanged)="onInputChanged($event)"
+      (selectChanged)="onSelectChanged($event)"
+      [inputCurrentValue]="firstInputValue"
+    ></app-form>
+    <app-form
+      [currencies]="currencies"
+      [inputName]="'secondInput'"
+      [selectName]="'secondSelect'"
+      (inputChanged)="onInputChanged($event)"
+      (selectChanged)="onSelectChanged($event)"
+      [inputCurrentValue]="secondInputValue"
+    ></app-form>
+  </div>
+  <!-- <div class="flex justify-between">
+    <p>First Input Value: {{ firstInputValue }}</p>
+    <p>Second Input Value: {{ secondInputValue }}</p>
+  </div> -->
+  <app-currencies-table [currencies]="currencies"></app-currencies-table>
+</div>
+<div></div>

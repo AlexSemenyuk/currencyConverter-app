@@ -1,0 +1,21 @@
+<div>
+  <div class="flex justify-center text-center font-bold">
+    <div class="w-[150px]">Код цифровий</div>
+    <div class="w-[600px] pl-2">Код літерний (Назва валюти)</div>
+    <div class="w-[200px]">Офіційний курс</div>
+    <div class="w-[200px]">на дату</div>
+  </div>
+  <div
+    *ngFor="let currency of currencies"
+    class="flex justify-center text-center"
+  >
+    <div class="w-[150px]">{{ currency.r030 }}</div>
+    <div class="text-start w-[600px] pl-2">
+      {{ currency.cc }} ({{ currency.txt }})
+    </div>
+    <div class="text-right w-[200px]">
+      {{ currency.rate | number : '.4-4' }}
+    </div>
+    <div class="w-[200px]">{{ currency.exchangedate }}</div>
+  </div>
+</div>

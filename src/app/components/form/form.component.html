@@ -1,0 +1,27 @@
+<form class="flex justify-start">
+  <input
+    class="outline-yellow-700 border border-solid border-teal-700 p-2"
+    type="number"
+    [(ngModel)]="inputValue"
+    (ngModelChange)="onInputChange()"
+    name="inputName"
+    placeholder="Введіть значення"
+    [value]="inputCurrentValue"
+  />
+  <select
+    class="border border-solid border-teal-700 p-2 ml-2"
+    name="{{ selectName }}"
+    [(ngModel)]="selectValue"
+    (change)="onSelectChange()"
+  >
+    <option *ngFor="let currency of currencies" [value]="currency.rate">
+      {{ currency.cc }}({{ currency.txt }})
+    </option>
+  </select>
+  <!-- <select name="selectName">
+    <option *ngFor="let currency of currencies" [value]="currency.txt">
+      {{ currency.cc }}({{ currency.txt }})
+    </option>
+  </select> -->
+  <!-- <button type="submit">Ок</button> -->
+</form>
